@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ES6",//version
+        "module": "CommonJS",
+        "rootDir": "src",//directorio fuente
+        "outDir": "dist",//Directorio de salida
+        "strict":true, //decirle a typscript siga las reglas, defina antes los datos, verificacion estrictaen el modulo de codificacion
+        "esModuleInterop": true//interoperar entre modulos s66 y modulos js
+    },
+    "include": ["src/**/*"],//concentres ene esat carpeta
+"exclude": ["node_modules"]//carpeta que excluya convertir
+
+
+
+}
