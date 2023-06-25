@@ -1,13 +1,25 @@
 import swaggerUi from 'swagger-ui-express'
 import express,{Application, Request, Response} from 'express'
 import { swaggerSpec } from './swagger.conf'
+
+/**
+ * Clase principal de la API. Define las rutas de la API
+ * 
+ * @author Carolina Chico Moreno
+ * @description Clase inicial para manejar rutas y documentación
+ */
 class App{
 //Atributos
 app:any
 private server:any
 
-constructor(){
-   
+
+	constructor(){
+
+		/**
+         * Express es la biblioteca para definir API en el ecosistema de Node.js
+         */
+
     this.app=express()
     this.app.use(express.json())//capacidad de generar archivos json
     this.app.use(
@@ -26,6 +38,16 @@ private routes():void{
         }
     
        )
+
+       this.app.post(
+        "/paciente", //la ruta primero la url, la funcion de callbackq s eva aejecutar
+         (req:Request, res:Response)=>{
+             res.send("Paciente")
+         }
+     
+        )
+
+        
 
 }
 public start():void{// iniciar el servidor

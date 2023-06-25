@@ -4,7 +4,8 @@
   "description": "Sandbox para el aprendizaje de documentación de un proyecto",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "ts-node src/index.ts"
   },
   "author": "Carolina Chico",
   "license": "ISC",
@@ -19,6 +20,8 @@
   },
   "devDependencies": {
     "@types/swagger-jsdoc": "^6.0.1",
-    "@types/swagger-ui-express": "^4.1.3"
+    "@types/swagger-ui-express": "^4.1.3",
+    "doc": "^0.0.3",
+    "type": "^2.7.2"
   }
 }
