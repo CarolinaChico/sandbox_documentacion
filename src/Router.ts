@@ -10,8 +10,8 @@ import { swaggerSpec } from './swagger.conf'
  */
 class App{
 //Atributos
-app:any
-private server:any
+	app:any
+	private server:any
 
 
 	constructor(){
@@ -20,45 +20,45 @@ private server:any
          * Express es la biblioteca para definir API en el ecosistema de Node.js
          */
 
-    this.app=express()
-    this.app.use(express.json())//capacidad de generar archivos json
-    this.app.use(
-        "/api-docs",
-        swaggerUi.serve,
-        swaggerUi.setup(swaggerSpec)
-    )
-    this.routes()//definir los diferentes puntos de entrada a mi proyecto
-}
+		this.app=express()
+		this.app.use(express.json())//capacidad de generar archivos json
+		this.app.use(
+			'/api-docs',
+			swaggerUi.serve,
+			swaggerUi.setup(swaggerSpec)
+		)
+		this.routes()//definir los diferentes puntos de entrada a mi proyecto
+	}
 
-private routes():void{
-    this.app.get(
-       "/", //la ruta primero la url, la funcion de callbackq s eva aejecutar
-        (req:Request, res:Response)=>{
-            res.send("Bienvenido a typescript")
-        }
+	private routes():void{
+		this.app.get(
+			'/', //la ruta primero la url, la funcion de callbackq s eva aejecutar
+			(req:Request, res:Response)=>{
+				res.send('Bienvenido a typescript')
+			}
     
-       )
+		)
 
-       this.app.post(
-        "/paciente", //la ruta primero la url, la funcion de callbackq s eva aejecutar
-         (req:Request, res:Response)=>{
-             res.send("Paciente")
-         }
+		this.app.post(
+			'/paciente', //la ruta primero la url, la funcion de callbackq s eva aejecutar
+			(req:Request, res:Response)=>{
+				res.send('Paciente')
+			}
      
-        )
+		)
 
         
 
-}
-public start():void{// iniciar el servidor
-   this.server= this.app.listen(3001,
-        ()=>{console.log("El servidor está escuchando en el puerto 3001")}        //funcion de callback se ejecuta una vez se inicie el servidor
-        )
+	}
+	public start():void{// iniciar el servidor
+		this.server= this.app.listen(3001,
+			()=>{console.log('El servidor está escuchando en el puerto 3001')}        //funcion de callback se ejecuta una vez se inicie el servidor
+		)
 
-}
-    public close():void{
-        this.server.close()
-    }
+	}
+	public close():void{
+		this.server.close()
+	}
 }
 
-export default App//cunado yo llame esta clase ya esta creado este modulo
+export default App//cuando yo llame esta clase ya esta creado este modulo

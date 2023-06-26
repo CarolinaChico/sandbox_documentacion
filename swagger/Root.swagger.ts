@@ -1,5 +1,5 @@
 export default {
-    /**
+	/**
      * 
      * @swagger
      * 
@@ -17,4 +17,4 @@ export default {
      * 
      * 
      */
-    }
+}

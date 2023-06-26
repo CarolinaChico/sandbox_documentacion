@@ -1,5 +1,5 @@
 export default {
-    /**
+	/**
      * 
      * @swagger
      * 
@@ -15,4 +15,4 @@ export default {
      *              example: "Bienvenidos a typescript"
      
      */
-    }
+}
