@@ -10,7 +10,7 @@ import { swaggerSpec } from './swagger.conf'
  */
 class App{
 //Atributos
-	app:any
+	public app:Application
 	private server:any
 
 
@@ -34,7 +34,7 @@ class App{
 		this.app.get(
 			'/', //la ruta primero la url, la funcion de callbackq s eva aejecutar
 			(req:Request, res:Response)=>{
-				res.send('Bienvenido a typescript')
+				res.send('Bienvenido a la IPS')
 			}
     
 		)
